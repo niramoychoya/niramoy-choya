@@ -1,222 +1,215 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0875d1">
 <title>নিরাময় ছোঁয়া | Niramoy Chhoya</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#0876d1;--blue2:#0754a5;--green:#178d57;--ink:#12365d;--muted:#647c98;--line:#d9eafa;--white:rgba(255,255,255,.86);--shadow:0 12px 32px rgba(28,93,145,.12)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Hind Siliguri',sans-serif;color:var(--ink);background:linear-gradient(145deg,#f7fcff 0%,#e9f5ff 48%,#f7fff9 100%);min-height:100vh}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 8% 18%,rgba(55,155,98,.14),transparent 24%),radial-gradient(ellipse at 88% 28%,rgba(36,144,226,.16),transparent 27%),radial-gradient(ellipse at 75% 90%,rgba(42,152,101,.10),transparent 26%)}
-a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}
-.wrap{width:min(1180px,94%);margin:auto}.glass{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.92);box-shadow:var(--shadow);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-header{position:sticky;top:10px;z-index:20;margin:14px auto 0;width:min(1240px,96%);border-radius:24px;padding:10px 18px;display:flex;align-items:center;gap:18px}
-.brand{display:flex;align-items:center;gap:10px;min-width:250px}.brand img{width:64px;height:64px;object-fit:contain;border-radius:50%}.brand-name{font-weight:800;font-size:26px;line-height:1.05;color:var(--blue2)}.brand-name span{color:var(--green)}.brand-en{font:700 10px 'Montserrat',sans-serif;letter-spacing:3px;color:var(--blue2);margin-top:5px}
-nav{display:flex;align-items:center;gap:20px;flex:1;justify-content:center}nav a{font-size:15px;font-weight:600;white-space:nowrap}nav a:hover{color:var(--blue)}
-.search{display:flex;align-items:center;gap:8px;background:#f7fbff;border:1px solid var(--line);border-radius:30px;padding:10px 14px;min-width:190px}.search input{border:0;outline:0;background:transparent;width:100%;min-width:0;color:var(--ink)}.cart-btn{border:0;border-radius:50%;width:46px;height:46px;background:white;box-shadow:0 4px 16px #0c6cb51b;color:var(--blue2);font-size:22px;position:relative}.cart-count{position:absolute;right:-3px;top:-4px;background:#075a47;color:white;font:700 11px Arial;border-radius:50%;min-width:19px;height:19px;display:grid;place-items:center}
-.hero{margin-top:20px;border-radius:30px;min-height:370px;overflow:hidden;position:relative;padding:46px 5.2%;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;background:linear-gradient(105deg,rgba(255,255,255,.87),rgba(224,243,255,.72)),radial-gradient(ellipse at 80% 70%,#c8eddb,transparent 42%);border:1px solid white;box-shadow:var(--shadow)}
-.hero:after{content:"";position:absolute;bottom:-80px;left:-4%;width:110%;height:145px;border-radius:50% 50% 0 0;background:linear-gradient(90deg,rgba(80,168,218,.12),rgba(255,255,255,.48));transform:rotate(-3deg)}
-.eyebrow{font-weight:600;color:var(--blue2);font-size:17px;margin:0 0 8px}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.08;margin:0;color:var(--blue2);letter-spacing:-1px}.hero h1 span{color:var(--green)}.hero-en{font:800 16px 'Montserrat',sans-serif;letter-spacing:7px;color:#237f9c;margin:10px 0 18px}.hero h2{font-size:23px;margin:0 0 8px}.hero p{max-width:480px;line-height:1.7;color:#365b7e;font-size:16px;margin:0 0 20px}.primary{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:15px;background:linear-gradient(100deg,var(--blue),#167bd9);color:white;font-weight:700;padding:13px 22px;box-shadow:0 8px 18px #0876d12b}.primary:hover{filter:brightness(.96);transform:translateY(-1px)}
-.hero-art{position:relative;min-height:275px;display:flex;align-items:center;justify-content:center}.hero-art .orb{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,#ffffffd9,#d4f2e1a8 65%,transparent 70%)}.hero-logo{width:min(270px,80%);height:270px;object-fit:contain;position:relative;filter:drop-shadow(0 12px 18px #1c6b4520)}.handwrite{position:absolute;right:0;top:15px;transform:rotate(-9deg);font-size:23px;line-height:1.25;color:var(--blue2);text-align:center;border-bottom:2px solid #2e9c70;border-radius:50%;padding:10px}
-.section{padding:38px 0 22px}.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:16px}.section-title{display:flex;align-items:center;gap:12px}.leaf{font-size:35px}.section-title h2{font-size:31px;line-height:1.15;margin:0;color:var(--blue2)}.section-title p{margin:4px 0 0;color:var(--muted);font-size:15px}.section-search{width:100%;padding:11px 15px;margin:0 0 18px}.featured-wrap{margin:0 0 18px;overflow:hidden;border-radius:22px;background:linear-gradient(130deg,#e8f5ff,#f5fff9);border:1px solid #d7eafa;box-shadow:var(--shadow);touch-action:pan-y}.featured-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}.featured-track::-webkit-scrollbar{display:none}.featured-slide{flex:0 0 100%;scroll-snap-align:center;display:flex;align-items:center;justify-content:center;height:clamp(240px,43vw,430px);padding:0;background:#fff}.featured-slide img{width:100%;height:100%;object-fit:contain;display:block}.featured-dots{display:flex;justify-content:center;gap:8px;padding:10px;background:#f4faff}.featured-dot{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid #6baddd;background:transparent}.featured-dot.active{background:var(--blue);border-color:var(--blue)}
-.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.product{border-radius:22px;padding:10px;background:rgba(255,255,255,.82);border:1px solid #dceefa;box-shadow:var(--shadow);min-width:0;transition:.2s}.product:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(28,93,145,.16)}.photo-wrap{position:relative;background:#fff;border-radius:15px;overflow:hidden;height:260px;display:grid;place-items:center}.photo-wrap img{width:100%;height:100%;object-fit:contain;cursor:zoom-in;padding:0}.discount{position:absolute;left:10px;top:10px;background:var(--blue);color:white;border-radius:18px;padding:4px 12px;font-size:13px;font-weight:700}.img-arrow{display:none}.dots{display:flex;gap:7px;justify-content:center;padding:7px 0 2px}.dot{width:9px;height:9px;border-radius:50%;border:1px solid #6baddd;background:transparent;padding:0}.dot.active{background:var(--blue);border-color:var(--blue)}
-.product h3{font-size:20px;margin:9px 8px 2px;line-height:1.25}.product-desc{margin:0 8px 10px;font-size:14px;color:#58738f;min-height:23px;line-height:1.5}.price-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:0 8px 13px}.price{font-size:26px;font-weight:800;color:var(--blue2)}.old-price{color:#8596a7;text-decoration:line-through;font-size:15px}.save{font-size:12px;background:#e2f6e9;color:#16834e;border-radius:9px;padding:4px 8px;font-weight:700}.product-actions{display:flex;flex-direction:column;gap:7px;padding:0 8px 8px}.add-btn{align-self:flex-start;margin:0;padding:5px 9px;border:1px solid #b9d9f4;border-radius:9px;background:#f0f8ff;color:var(--blue2);font-size:12px;font-weight:600}.add-btn:hover{background:#e1f1ff}.order-btn{width:100%;padding:12px 10px;border:0;border-radius:12px;background:linear-gradient(100deg,#0875d1,#1685df);color:white;font-size:17px;font-weight:800;box-shadow:0 6px 14px #0876d126}.order-btn:hover{background:var(--blue2)}
-.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:28px 0 48px}.benefit{border-radius:18px;padding:20px;display:flex;align-items:center;gap:13px}.benefit-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:#e4f3ff;font-size:25px}.benefit h3{margin:0;font-size:17px}.benefit p{margin:2px 0 0;color:var(--muted);font-size:13px}
-footer{background:linear-gradient(115deg,#063b70,#104d80 65%,#07533e);color:#f4fbff;padding:36px 0 18px;margin-top:25px;position:relative;overflow:hidden}footer:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 100%,#1c956f35,transparent 24%),radial-gradient(circle at 90% 10%,#57b5ee25,transparent 25%);pointer-events:none}.footer-grid{position:relative;display:grid;grid-template-columns:1.3fr .8fr 1fr;gap:30px}.footer-brand{display:flex;align-items:center;gap:10px}.footer-brand img{width:70px;height:70px;object-fit:contain;background:white;border-radius:50%}.footer-brand strong{font-size:25px}.footer-brand small{display:block;font:700 9px 'Montserrat',sans-serif;letter-spacing:3px}.footer-col h3{margin:4px 0 10px;font-size:17px}.footer-col a,.footer-col p{display:block;margin:5px 0;color:#dceeff;font-size:14px}.socials{display:flex;gap:10px}.socials a{width:36px;height:36px;border-radius:50%;background:#fff;color:#075da9;display:grid;place-items:center;font-weight:800;font-size:15px}.copyright{position:relative;border-top:1px solid #ffffff30;margin-top:25px;padding-top:15px;text-align:center;font-size:12px;color:#c8ddef}
-.overlay{position:fixed;inset:0;background:#06254475;backdrop-filter:blur(5px);z-index:50;display:none;align-items:center;justify-content:center;padding:16px}.overlay.open{display:flex}.modal{background:#f9fdff;border:1px solid white;border-radius:22px;width:min(540px,100%);max-height:90vh;overflow:auto;padding:20px;box-shadow:0 25px 80px #00234445;position:relative}.close{position:absolute;right:13px;top:13px;width:35px;height:35px;border:0;border-radius:50%;background:#e9f4ff;color:var(--blue2);font-size:23px;z-index:2}.modal h2{margin:0 42px 16px 0;color:var(--blue2)}.cart-item{display:grid;grid-template-columns:62px 1fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.cart-item img{width:62px;height:62px;object-fit:contain;background:#e9f7ff;border-radius:12px}.cart-item h4{margin:0;font-size:16px}.cart-item p{margin:2px 0;color:var(--muted);font-size:14px}.qty{display:flex;align-items:center;gap:8px}.qty button{border:0;border-radius:8px;width:27px;height:27px;background:#e3f2ff;color:var(--blue2);font-weight:800}.total{display:flex;justify-content:space-between;font-weight:800;font-size:21px;margin:18px 0}.checkout-form{display:grid;gap:10px;margin-top:18px}.checkout-form input,.checkout-form textarea{width:100%;border:1px solid #cfe3f5;border-radius:12px;padding:12px;background:white;outline-color:var(--blue)}.checkout-form textarea{min-height:78px;resize:vertical}.empty{text-align:center;padding:24px;color:var(--muted)}.lightbox-img{width:100%;max-height:68vh;object-fit:contain;border-radius:14px;background:#e8f7ff}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#073e6b;color:white;padding:11px 18px;border-radius:30px;z-index:80;box-shadow:var(--shadow);display:none}.toast.show{display:block}
-.checkout-page{display:none;position:fixed;inset:0;z-index:100;background:linear-gradient(145deg,#f7fcff,#e8f4ff 55%,#f5fff9);overflow-y:auto;padding:18px 12px 40px}.checkout-page.open{display:block}.checkout-shell{width:min(760px,100%);margin:0 auto}.checkout-top{display:flex;align-items:center;gap:12px;margin:0 0 18px}.back-shop{border:0;border-radius:12px;background:#e1f1ff;color:#0754a5;padding:10px 14px;font-weight:800}.checkout-card{background:#ffffffed;border:1px solid #d9eafa;border-radius:22px;padding:22px;box-shadow:var(--shadow)}.checkout-card h1{margin:0 0 3px;color:var(--blue2);font-size:30px}.checkout-card .sub{margin:0 0 20px;color:var(--muted)}.form-label{display:block;font-weight:700;margin:13px 0 6px}.checkout-card input,.checkout-card textarea,.checkout-card select{width:100%;padding:13px;border:1px solid #cfe3f5;border-radius:12px;background:white;color:var(--ink);outline-color:var(--blue)}.checkout-card textarea{min-height:88px;resize:vertical}.summary-box{margin-top:20px;background:#f0f8ff;border:1px solid #d4e9fa;border-radius:16px;padding:15px}.summary-row{display:flex;justify-content:space-between;gap:15px;padding:6px 0;color:#456887}.summary-row.grand{border-top:1px solid #c8e0f5;margin-top:5px;padding-top:12px;font-size:21px;font-weight:900;color:var(--blue2)}.checkout-submit{width:100%;margin-top:18px;border:0;border-radius:14px;padding:15px;background:linear-gradient(100deg,#0875d1,#1685df);color:white;font-size:18px;font-weight:900}.selected-preview{display:flex;align-items:center;gap:12px;padding:12px;background:#f8fcff;border:1px solid #e0eef9;border-radius:14px;margin:12px 0}.selected-preview img{width:76px;height:76px;object-fit:contain;background:white;border-radius:10px}.selected-preview strong{display:block;color:var(--blue2)}@media(max-width:650px){.checkout-card{padding:16px}.checkout-card h1{font-size:26px}.checkout-page{padding:10px 9px 30px}}
-@media(max-width:1000px){header{flex-wrap:wrap;gap:10px}.brand{min-width:unset;flex:1}.brand img{width:53px;height:53px}.brand-name{font-size:22px}nav{order:3;width:100%;justify-content:space-around;gap:8px;border-top:1px solid #dceaf5;padding-top:9px}nav a{font-size:14px}.top-search{width:210px}.hero{padding:35px 4%;min-height:340px}.photo-wrap{height:220px}.products{gap:12px}}
-.product h3{cursor:pointer;color:var(--blue2);text-decoration:underline;text-decoration-color:#b9d9f4;text-underline-offset:4px}.product-actions{display:grid;grid-template-columns:1fr;gap:7px;margin:0 4px 5px}.order-btn{width:100%;border:0;border-radius:12px;padding:10px 8px;background:linear-gradient(135deg,#075aab,#2188e8);color:white;font-weight:800;cursor:pointer;box-shadow:0 7px 16px #1679c526}.detail-photo{width:100%;height:210px;object-fit:contain;background:#eaf7ff;border-radius:15px;margin-bottom:12px}.detail-price{font-size:24px;font-weight:900;color:var(--blue2)}.detail-desc{line-height:1.8;color:#456887}.detail-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:16px}.detail-actions button{padding:12px 8px;border:0;border-radius:12px;font-weight:800;cursor:pointer}.detail-cart{background:#e1f1ff;color:#075aab}.detail-order{background:linear-gradient(135deg,#075aab,#2188e8);color:#fff}
-@media(max-width:650px){header{top:4px;margin-top:6px;border-radius:18px;padding:8px 10px;width:96%}.brand img{width:45px;height:45px}.brand-name{font-size:19px}.brand-en{font-size:8px;letter-spacing:2px}.top-search{order:2;flex:1;min-width:100px;padding:8px 10px}.cart-btn{width:40px;height:40px}nav{overflow-x:auto;justify-content:flex-start;gap:20px;padding:9px 3px 1px}nav a{font-size:13px}.hero{grid-template-columns:1fr;padding:27px 22px 15px;min-height:unset;margin-top:12px}.hero h1{font-size:43px}.hero-en{font-size:12px;letter-spacing:4px}.hero h2{font-size:20px}.hero p{font-size:14px}.hero-art{min-height:190px}.hero-art .orb{width:190px;height:190px}.hero-logo{height:190px;width:190px}.handwrite{font-size:16px;right:0;top:0}.section{padding-top:28px}.section-head{align-items:flex-start;flex-direction:column}.section-title h2{font-size:27px}.section-search{width:100%}.featured-slide{height:clamp(220px,66vw,360px)}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product{padding:7px;border-radius:16px}.photo-wrap{height:190px;border-radius:12px}.discount{font-size:10px;left:6px;top:6px;padding:3px 7px}.img-arrow{width:27px;height:27px;font-size:18px}.product h3{font-size:16px;margin:7px 4px 2px}.product-desc{font-size:12px;margin:0 4px 7px;min-height:35px}.price-row{gap:5px;margin:0 4px 9px}.price{font-size:21px}.old-price{font-size:12px}.save{font-size:10px;padding:3px 5px}.product-actions{padding:0 4px 4px;gap:6px}.add-btn{font-size:11px;padding:4px 7px}.order-btn{font-size:15px;padding:11px 5px}.benefits{grid-template-columns:1fr;gap:10px;margin:20px 0 30px}.benefit{padding:14px}.footer-grid{grid-template-columns:1fr 1fr;gap:22px}.footer-grid>div:first-child{grid-column:1/-1}.footer-brand img{width:56px;height:56px}.footer-brand strong{font-size:22px}.copyright{margin-top:20px}.modal{padding:16px}}
+:root{--blue:#0875d1;--dark:#0754a5;--ink:#12365d;--muted:#6b8199;--line:#dceafa;--green:#16834e}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Hind Siliguri',sans-serif;color:var(--ink);background:radial-gradient(ellipse at top left,#d9edff 0,transparent 42%),linear-gradient(145deg,#f8fcff,#edf6ff 60%,#f0fff7);min-height:100vh}
+button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:5;background:#ffffffdc;backdrop-filter:blur(18px);border-bottom:1px solid #dbeafa;padding:12px 4%;display:flex;align-items:center;gap:12px}
+.brand{display:flex;align-items:center;gap:9px;margin-right:auto;min-width:0}.brand img{width:45px;height:45px;object-fit:contain}.brand strong{font-size:21px;color:var(--dark);white-space:nowrap}
+.search{width:min(250px,32vw);padding:11px 15px;border:1px solid var(--line);border-radius:30px;background:#fff;outline-color:var(--blue)}
+.btn{border:0;border-radius:12px;background:linear-gradient(110deg,#0875d1,#2694eb);color:white;padding:11px 16px;font-weight:800;box-shadow:0 5px 13px #0875d126}
+.cart-btn{white-space:nowrap}.cart-btn span{background:white;color:var(--dark);padding:2px 7px;border-radius:20px;margin-left:3px}
+.wrap{width:min(1120px,94%);margin:auto}
+.hero{margin:24px auto 30px;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:clamp(22px,4vw,44px);border:1px solid #d4e8fb;border-radius:28px;background:linear-gradient(115deg,#fff 0%,#e3f2ff 58%,#e9f9ef 100%);box-shadow:0 20px 50px #2e70a311;overflow:hidden}
+.eyebrow{color:var(--green);font-weight:800;margin:0 0 7px}.hero h1{font-size:clamp(34px,5.5vw,58px);line-height:1.12;color:var(--dark);margin:0 0 12px}.hero p{line-height:1.8;color:#4c6b89;max-width:580px}.hero img{width:min(230px,34%);height:220px;object-fit:contain;filter:drop-shadow(0 12px 16px #276ba322)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:25px 0 16px}.section-head h2{margin:0;color:var(--dark);font-size:28px}.section-head p{margin:3px 0;color:var(--muted)}
+.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.product{min-width:0;padding:11px;background:#ffffffdc;border:1px solid #dceafa;border-radius:22px;box-shadow:0 12px 30px #1c5d9110;transition:transform .2s,box-shadow .2s}
+.product:hover{transform:translateY(-3px);box-shadow:0 18px 36px #1c5d9119}
+.gallery{height:250px;background:linear-gradient(140deg,#f4faff,#fff);border-radius:15px;overflow:hidden;touch-action:pan-y}
+.gallery img{width:100%;height:100%;object-fit:contain;cursor:zoom-in;display:block}
+.dots{display:flex;justify-content:center;gap:7px;padding:10px 0 5px}.dot{width:8px;height:8px;padding:0;border-radius:50%;border:0;background:#c7d8e8}.dot.active{background:var(--blue);width:20px;border-radius:8px}
+.product h3{font-size:19px;color:var(--dark);margin:7px 3px 4px;cursor:pointer;text-decoration:underline;text-decoration-color:#c5def5;text-underline-offset:4px}
+.desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0 3px;min-height:42px}
+.prices{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:12px 3px}.price{font-size:23px;font-weight:800;color:var(--dark)}.old{color:#8a9aab;text-decoration:line-through;font-size:14px}.discount{font-size:12px;font-weight:800;background:#e3f8eb;color:#137a43;border-radius:8px;padding:4px 7px}
+.actions{display:grid;grid-template-columns:1fr;gap:8px}.actions button{padding:11px;border-radius:12px;font-weight:800}.add{background:#e8f4ff;color:var(--dark);border:1px solid #d0e7fb}.buy{border:0;background:linear-gradient(110deg,#0875d1,#258ce4);color:white}
+footer{margin-top:42px;background:linear-gradient(120deg,#073b68,#0754a5);color:white;padding:27px 0;text-align:center}footer p{margin:5px 0;color:#e2efff}
+.overlay{position:fixed;inset:0;z-index:20;background:#06213dcc;backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:14px}.overlay.open{display:flex}
+.modal{width:min(560px,100%);max-height:90vh;overflow:auto;background:linear-gradient(145deg,#fff,#f4faff);border:1px solid #d9eafa;border-radius:24px;padding:20px;box-shadow:0 25px 90px #001a3c55;animation:pop .18s ease-out}
+@keyframes pop{from{transform:translateY(10px) scale(.98);opacity:.5}to{transform:translateY(0) scale(1);opacity:1}}
+.modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.modal-head h2{margin:0;color:var(--dark)}
+.close{flex:none;width:37px;height:37px;border:0;border-radius:50%;background:#e6f2ff;color:var(--dark);font-size:24px}
+.cart-row{display:grid;grid-template-columns:70px minmax(0,1fr) auto;gap:11px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-row img{width:70px;height:70px;object-fit:contain;background:white;border-radius:12px;border:1px solid #edf4fb}
+.cart-row h3{font-size:16px;margin:0}.cart-row p{font-size:13px;color:var(--muted);margin:3px 0}
+.qty{display:flex;align-items:center;gap:8px;margin-top:5px}.qty button{width:27px;height:27px;border:0;border-radius:8px;background:#e3f1ff;color:var(--dark);font-weight:800}
+.remove{border:0;background:none;color:#c23d4b;font-size:12px;padding:3px 0}
+.cart-line-total{font-weight:800;color:var(--dark);white-space:nowrap;font-size:14px}
+.total{display:flex;justify-content:space-between;gap:12px;margin:17px 0;font-size:20px;font-weight:800;color:var(--dark)}
+.full{width:100%;padding:14px;font-size:17px}
+.secondary{width:100%;margin-top:9px;padding:11px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--dark);font-weight:700}
+.empty{text-align:center;padding:28px 10px;color:var(--muted)}
+.detail-img{width:100%;height:235px;object-fit:contain;background:white;border-radius:15px}
+.detail-copy{color:#526f8c;line-height:1.8}
+.toast{display:none;position:fixed;z-index:40;bottom:20px;left:50%;transform:translateX(-50%);background:#073b68;color:white;border-radius:30px;padding:12px 20px;box-shadow:0 8px 25px #06213d33;white-space:nowrap}.toast.show{display:block}
+@media(max-width:720px){header{padding:9px 3%;gap:7px;flex-wrap:wrap}.brand img{width:37px;height:37px}.brand strong{font-size:17px}.search{order:3;width:100%;max-width:none}.cart-btn{padding:10px 11px}.hero{margin-top:15px;padding:22px;border-radius:22px}.hero img{height:150px;width:33%}.hero h1{font-size:35px}.hero p{font-size:14px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product{padding:7px;border-radius:17px}.gallery{height:clamp(140px,43vw,215px)}.product h3{font-size:16px}.desc{font-size:12px;min-height:45px}.prices{gap:5px}.price{font-size:19px}.old{font-size:12px}.discount{font-size:10px;padding:3px 5px}.actions button{font-size:13px;padding:10px 4px}.section-head h2{font-size:24px}.modal{padding:15px;border-radius:20px}.cart-row{grid-template-columns:54px minmax(0,1fr) auto;gap:7px}.cart-row img{width:54px;height:60px}.cart-row h3{font-size:14px}.cart-line-total{font-size:12px}}
 </style>
 </head>
 <body>
-<header class="glass">
-  <a class="brand" href="#home" aria-label="নিরাময় ছোঁয়া হোম">
-    <img alt="নিরাময় ছোঁয়া লোগো" src="logo.jpg">
-    <div><div class="brand-name">নিরাময় <span>ছোঁয়া</span></div><div class="brand-en">NIRAMOY CHHOYA</div></div>
-  </a>
-  <nav aria-label="মূল মেনু">
-    <a href="#home">হোম</a><a href="#products">পণ্যসমূহ</a><a href="#benefits">সুবিধা</a><a href="#about">আমাদের সম্পর্কে</a><a href="#about">আমাদের সম্পর্কে</a>
-  </nav>
-  <label class="search top-search">⌕ <input id="topSearch" placeholder="পণ্যের নাম খুঁজুন..." aria-label="পণ্য খুঁজুন"></label>
-  <button class="cart-btn" id="openCart" aria-label="কার্ট খুলুন">🛒<span class="cart-count" id="cartCount">0</span></button>
+<header>
+ <a class="brand" href="index.html"><img src="logo.jpg" alt="লোগো" onerror="this.style.display='none'"><strong>নিরাময় ছোঁয়া</strong></a>
+ <input class="search" id="search" placeholder="🔎 পণ্য খুঁজুন...">
+ <button class="btn cart-btn" id="openCart">🛒 কার্ট <span id="cartCount">০</span></button>
 </header>
 
 <main class="wrap">
-  <section class="hero" id="home">
-    <div class="hero-copy">
-      <p class="eyebrow">স্বাস্থ্যকর জীবন, সুন্দর আগামীর পথে</p>
-      <h1>নিরাময় <span>ছোঁয়া</span></h1>
-      <div class="hero-en">NIRAMOY CHHOYA</div>
-      <h2>আপনার সুস্থতা, আমাদের অগ্রাধিকার</h2>
-      <p>মানসম্মত স্বাস্থ্য ও যত্নের পণ্য, প্রয়োজনীয় তথ্য এবং সহজ অর্ডার—সবকিছু এক জায়গায়। আপনার পছন্দের পণ্য খুঁজে নিন সহজেই।</p>
-      <a class="primary" href="#products">🛒 &nbsp; পণ্য দেখুন &nbsp; →</a>
-    </div>
-    <div class="hero-art"><div class="orb"></div><img class="hero-logo" alt="নিরাময় ছোঁয়া" src="logo.jpg"><div class="handwrite">সুস্থ থাকুন<br>ভালো থাকুন ♡</div></div>
-  </section>
+ <section class="hero">
+  <div>
+   <p class="eyebrow">আপনার যত্ন, আমাদের অগ্রাধিকার</p>
+   <h1>নিরাময় ছোঁয়া</h1>
+   <p>আপনার পছন্দের পণ্য দেখুন, বিস্তারিত জানুন এবং সহজেই অর্ডার করুন।</p>
+   <a class="btn" href="#products">পণ্য দেখুন ↓</a>
+  </div>
+  <img src="logo.jpg" alt="নিরাময় ছোঁয়া" onerror="this.style.visibility='hidden'">
+ </section>
 
-  <section class="section" id="products">
-    <div class="section-head">
-      <div class="section-title"><span class="leaf">🌿</span><div><h2>আমাদের পণ্য</h2><p>আপনার প্রয়োজনীয় স্বাস্থ্য ও যত্নের পণ্যগুলো</p></div></div>
-    </div>
-    <div class="featured-wrap" aria-label="বিশেষ পণ্যের ছবি">
-      <div class="featured-track" id="featuredTrack">
-        <div class="featured-slide"><img src="vital-king.jpg" alt="ভাইটাল কিং পণ্য" onerror="this.style.display='none'"></div>
-        <div class="featured-slide"><img src="safa-khurma.jpg" alt="সাফা খুরমা পণ্য" onerror="this.style.display='none'"></div>
-        <div class="featured-slide"><img src="winpex.jpg" alt="Winpex পণ্য" onerror="this.style.display='none'"></div>
-      </div>
-      <div class="featured-dots"><button class="featured-dot active" data-feature-dot="0" aria-label="প্রথম ছবি"></button><button class="featured-dot" data-feature-dot="1" aria-label="দ্বিতীয় ছবি"></button><button class="featured-dot" data-feature-dot="2" aria-label="তৃতীয় ছবি"></button></div>
-    </div>
-    <label class="search section-search">⌕ <input id="productSearch" placeholder="পণ্যের নাম খুঁজুন..." aria-label="পণ্য খুঁজুন"></label>
-    <div class="products" id="productGrid"></div>
-  </section>
-
-  <section class="section" id="about">
-    <div class="section-title"><span class="leaf">🌱</span><div><h2>আমাদের সম্পর্কে</h2><p>স্বাস্থ্য ও যত্নে আপনার পাশে—নিরাময় ছোঁয়া।</p></div></div>
-    <p style="line-height:1.8;color:#456887;max-width:760px">নিরাময় ছোঁয়া একটি স্বাস্থ্য ও যত্নের পণ্যের অনলাইন শপ। পণ্যের মূল্য, বিবরণ এবং অর্ডার সংক্রান্ত তথ্য জানতে আমাদের সঙ্গে যোগাযোগ করুন। কোনো ওষুধ বা স্বাস্থ্যপণ্য ব্যবহারের আগে প্যাকেটের নির্দেশনা পড়ুন এবং প্রয়োজনে চিকিৎসক বা ফার্মাসিস্টের পরামর্শ নিন।</p>
-  </section>
+ <section id="products">
+  <div class="section-head"><div><h2>আমাদের পণ্য</h2><p>ছবি সোয়াইপ করুন, নামের ওপর চাপ দিয়ে বিস্তারিত দেখুন।</p></div></div>
+  <div class="products" id="productGrid"></div>
+ </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div><div class="footer-brand"><img alt="লোগো" src="logo.jpg"><div><strong>নিরাময় ছোঁয়া</strong><small>NIRAMOY CHHOYA</small></div></div><p>স্বাস্থ্য ও যত্নে আপনার পাশে।</p><a href="mailto:niramoychowa@gmail.com">✉ niramoychowa@gmail.com</a></div>
-      <div class="footer-col"><h3>দ্রুত লিংক</h3><a href="#home">হোম</a><a href="#products">পণ্যসমূহ</a><a href="#about">আমাদের সম্পর্কে</a><a href="#about">আমাদের সম্পর্কে</a></div>
-      <div class="footer-col"><h3>যোগাযোগ ও সোশ্যাল</h3><p>📞 +880 1642-335169</p><p>📞 +880 1864-330155</p><div class="socials"><a href="https://www.facebook.com/share/19h1z2dyzX/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">f</a><a href="https://wa.me/8801642335169" target="_blank" rel="noopener" aria-label="WhatsApp">W</a></div></div>
-    </div>
-    <div class="copyright">© 2026 Niramoy Chhoya. সর্বস্বত্ব সংরক্ষিত।</div>
-  </div>
-</footer>
+<footer><div class="wrap">
+ <strong>নিরাময় ছোঁয়া | Niramoy Chhoya</strong>
+ <p>যোগাযোগ: +880 1642-335169</p>
+ <p><a href="mailto:niramoychowa@gmail.com">niramoychowa@gmail.com</a></p>
+ <p><a href="https://www.facebook.com/share/19h1z2dyzX/?mibextid=wwXIfr">Facebook পেজ</a></p>
+</div></footer>
 
-<div class="checkout-page" id="checkoutPage" aria-label="অর্ডার পেজ">
- <div class="checkout-shell">
-  <div class="checkout-top"><button type="button" class="back-shop" id="backToShop">← শপিংয়ে ফিরে যান</button><strong style="color:var(--blue2)">নিরাময় ছোঁয়া</strong></div>
-  <div class="checkout-card">
-   <h1>অর্ডার ফরম</h1><p class="sub">নিচে আপনার সঠিক তথ্য দিয়ে অর্ডার দিন।</p>
-   <form id="newOrderForm">
-    <label class="form-label" for="orderName">আপনার নাম *</label><input id="orderName" placeholder="আপনার সম্পূর্ণ নাম" required>
-    <label class="form-label" for="orderPhone">মোবাইল নম্বর *</label><input id="orderPhone" placeholder="01XXXXXXXXX" inputmode="tel" pattern="01[0-9]{9}" required>
-    <label class="form-label" for="orderAddress">সম্পূর্ণ ঠিকানা *</label><textarea id="orderAddress" placeholder="বাসা, গ্রাম/এলাকা, উপজেলা ও জেলা" required></textarea>
-    <label class="form-label" for="orderProduct">পণ্য নির্বাচন করুন *</label><select id="orderProduct" required></select>
-    <div class="selected-preview"><img id="orderProductImage" src="vital-king.jpg" alt="নির্বাচিত পণ্য"><div><strong id="orderProductName">ভাইটাল কিং</strong><span id="orderProductUnit">পণ্যের একক মূল্য: ৳280</span></div></div>
-    <label class="form-label" for="orderQty">পরিমাণ *</label><select id="orderQty"><option value="1">১টি</option><option value="2">২টি</option><option value="3">৩টি</option><option value="4">৪টি</option><option value="5">৫টি</option><option value="6">৬টি</option><option value="7">৭টি</option><option value="8">৮টি</option><option value="9">৯টি</option><option value="10">১০টি</option></select>
-    <label class="form-label" for="deliveryArea">ডেলিভারি এলাকা *</label><select id="deliveryArea"><option value="70">ঢাকার ভিতরে — ৳৭০</option><option value="120">ঢাকার বাইরে — ৳১২০</option></select>
-    <div class="summary-box"><div class="summary-row"><span>পণ্যের একক মূল্য:</span><strong id="summaryUnit">৳280</strong></div><div class="summary-row"><span>পরিমাণ:</span><strong id="summaryQty">১টি</strong></div><div class="summary-row"><span>পণ্যের মোট মূল্য:</span><strong id="summaryProducts">৳280</strong></div><div class="summary-row"><span>ডেলিভারি চার্জ:</span><strong id="summaryDelivery">৳70</strong></div><div class="summary-row grand"><span>সর্বমোট মূল্য:</span><strong id="summaryGrand">৳350</strong></div></div>
-    <button class="checkout-submit" type="submit">WhatsApp-এ অর্ডার করুন ↗</button><small style="display:block;color:var(--muted);margin-top:10px">অর্ডার নিশ্চিত করতে WhatsApp খুলবে। পাঠানোর আগে সব তথ্য যাচাই করুন।</small>
-   </form>
-  </div>
- </div>
+<!-- Cart popup -->
+<div class="overlay" id="cartOverlay">
+ <section class="modal" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+  <div class="modal-head"><h2 id="cartTitle">🛒 আপনার কার্ট</h2><button class="close" data-close>×</button></div>
+  <div id="cartItems"></div>
+  <div class="total"><span>পণ্যের মোট মূল্য</span><span id="cartTotal">৳০</span></div>
+  <button class="btn full" id="goOrder">অর্ডার করুন →</button>
+  <button class="secondary" data-close>আরও পণ্য দেখুন</button>
+ </section>
 </div>
-<div class="overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-label="শপিং কার্ট">
-  <div class="modal"><button class="close" data-close="cartOverlay" aria-label="বন্ধ করুন">×</button><h2>🛒 আপনার শপিং কার্ট</h2><div id="cartItems"></div><div class="total"><span>মোট</span><span id="cartTotal">৳ ০</span></div>
-  <form class="checkout-form" id="checkoutForm"><input id="customerName" placeholder="আপনার নাম" required><input id="customerPhone" placeholder="মোবাইল নম্বর" inputmode="tel" required><textarea id="customerAddress" placeholder="সম্পূর্ণ ডেলিভারি ঠিকানা" required></textarea><button class="primary" type="submit">WhatsApp-এ অর্ডার করুন ↗</button><small style="color:var(--muted)">অর্ডার পাঠাতে WhatsApp খুলবে। পাঠানোর আগে তথ্য যাচাই করুন।</small></form>
-  </div>
+
+<!-- Product details popup -->
+<div class="overlay" id="detailOverlay">
+ <section class="modal" role="dialog" aria-modal="true" aria-labelledby="detailName">
+  <div class="modal-head"><h2>পণ্যের বিস্তারিত</h2><button class="close" data-close>×</button></div>
+  <img class="detail-img" id="detailImg" alt="পণ্যের ছবি">
+  <h2 id="detailName"></h2><div class="price" id="detailPrice"></div>
+  <p class="detail-copy" id="detailDesc"></p>
+  <p class="detail-copy">ব্যবহারের আগে প্যাকেটের উপাদান, ব্যবহারবিধি ও সতর্কতা যাচাই করুন। স্বাস্থ্য-সম্পর্কিত পণ্যের ক্ষেত্রে প্রয়োজনে চিকিৎসক বা ফার্মাসিস্টের পরামর্শ নিন।</p>
+  <button class="btn full" id="detailAdd">🛒 কার্টে যোগ করুন</button>
+  <button class="secondary" id="detailBuy">এখনই অর্ডার করুন →</button>
+ </section>
 </div>
-<div class="overlay" id="imageOverlay" role="dialog" aria-modal="true" aria-label="বড় ছবি"><div class="modal"><button class="close" data-close="imageOverlay" aria-label="বন্ধ করুন">×</button><img id="lightboxImg" class="lightbox-img" alt="পণ্যের বড় ছবি"><h3 id="lightboxTitle"></h3></div></div>
-<div class="overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-label="পণ্যের বিস্তারিত"><div class="modal"><button class="close" data-close="detailOverlay" aria-label="বন্ধ করুন">×</button><img id="detailImage" class="detail-photo" alt="পণ্যের ছবি"><h2 id="detailName"></h2><div class="detail-price" id="detailPrice"></div><p class="detail-desc" id="detailDescription"></p><p class="detail-desc"><strong>কেনার আগে:</strong> প্যাকেটের উপাদান, ব্যবহারবিধি ও সতর্কতা দেখে নিন। প্রয়োজনে চিকিৎসক বা ফার্মাসিস্টের পরামর্শ নিন।</p><div class="detail-actions"><button class="detail-cart" id="detailAdd">🛒 কার্টে যোগ করুন</button><button class="detail-order" id="detailOrder">এখনই অর্ডার করুন ↗</button></div></div></div>
+
+<!-- Image zoom popup -->
+<div class="overlay" id="imageOverlay">
+ <section class="modal" role="dialog" aria-modal="true">
+  <div class="modal-head"><h2 id="zoomName">পণ্যের ছবি</h2><button class="close" data-close>×</button></div>
+  <img class="detail-img" id="zoomImg" alt="বড় পণ্যের ছবি">
+ </section>
+</div>
 <div class="toast" id="toast"></div>
-<script>
-/* index.html-এর একই ফোল্ডারে logo.jpg এবং পণ্যের JPG ছবিগুলো আপলোড করুন।
-   পণ্য যোগ/সম্পাদনা করতে নিচের products তালিকায় তথ্য বদলান। */
-const products = [
- {id:1,name:"ভাইটাল কিং",desc:"শক্তি, সহনশীলতা ও কর্মক্ষমতা বাড়াতে সহায়ক।",price:280,regular:300,images:["vital-king.jpg","vital-king-2.jpg","vital-king-3.jpg"]},
- {id:2,name:"সাফা খুরমা",desc:"প্রাকৃতিক উপাদানে তৈরি খেজুরের পণ্য।",price:780,regular:900,images:["safa-khurma.jpg","safa-khurma-2.jpg","safa-khurma-3.jpg"]},
- {id:3,name:"Winpex A to Z Multivitamin",desc:"ভিটামিন ও মিনারেল সমৃদ্ধ সাপ্লিমেন্ট।",price:450,regular:500,images:["winpex.jpg","winpex-2.jpg","winpex-3.jpg"]}
-];
-const cart = {};
-const taka = n => "৳ " + Number(n).toLocaleString("en-BD");
-const discount = p => Math.max(0,Math.round((p.regular-p.price)/p.regular*100));
-let activeImages = {};
-let detailProductId = null;
-function renderProducts(filter=""){
- const grid=document.getElementById("productGrid");
- const found=products.filter(p=>(p.name+" "+p.desc).toLowerCase().includes(filter.toLowerCase()));
- if(!found.length){grid.innerHTML='<p style="grid-column:1/-1;text-align:center;color:#647c98;padding:28px">কোনো পণ্য পাওয়া যায়নি।</p>';return}
- grid.innerHTML=found.map(p=>{
-  const idx=activeImages[p.id]||0;
-  return `<article class="product">
-   <div class="photo-wrap"><span class="discount">${discount(p)}% ছাড়</span>
-   <img src="${p.images[idx]}" alt="${p.name}" data-zoom="${p.id}" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22 viewBox=%220 0 400 300%22%3E%3Crect width=%22400%22 height=%22300%22 rx=%2220%22 fill=%22%23e6f5ff%22/%3E%3Ccircle cx=%22200%22 cy=%22120%22 r=%2250%22 fill=%22%23c7e7d7%22/%3E%3Ctext x=%22200%22 y=%22195%22 font-size=%2250%22 text-anchor=%22middle%22%3E🌿%3C/text%3E%3Ctext x=%22200%22 y=%22245%22 font-size=%2218%22 fill=%22%230754a5%22 text-anchor=%22middle%22%3EProduct Photo%3C/text%3E%3C/svg%3E'">
-   </div>
-   <div class="dots">${p.images.map((im,i)=>`<button class="dot ${i===idx?'active':''}" data-dot="${p.id}" data-index="${i}" aria-label="ছবি ${i+1}"></button>`).join("")}</div>
-   <h3 data-detail="${p.id}" role="button" tabindex="0">${p.name}</h3><p class="product-desc">${p.desc}</p>
-   <div class="price-row"><span class="price">${taka(p.price)}</span><span class="old-price">${taka(p.regular)}</span><span class="save">${discount(p)}% ছাড়</span></div>
-   <div class="product-actions"><button class="add-btn" data-add="${p.id}">🛒 &nbsp; কার্টে যোগ করুন</button><button class="order-btn" data-order="${p.id}">এখনই অর্ডার করুন ↗</button></div>
-  </article>`;
- }).join("");
-}
-function showToast(text){const t=document.getElementById("toast");t.textContent=text;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1900)}
-function updateCount(){document.getElementById("cartCount").textContent=Object.values(cart).reduce((a,b)=>a+b,0)}
-function renderCart(){
- const box=document.getElementById("cartItems"),entries=products.filter(p=>cart[p.id]);
- if(!entries.length){box.innerHTML='<div class="empty">আপনার কার্ট এখন খালি।<br>পছন্দের পণ্য কার্টে যোগ করুন।</div>';document.getElementById("cartTotal").textContent=taka(0);return}
- box.innerHTML=entries.map(p=>`<div class="cart-item"><img src="${p.images[0]}" onerror="this.style.visibility='hidden'" alt=""><div><h4>${p.name}</h4><p>${taka(p.price)} × ${cart[p.id]}</p><div class="qty"><button data-qty="${p.id}" data-delta="-1">−</button><span>${cart[p.id]}</span><button data-qty="${p.id}" data-delta="1">+</button></div></div><strong>${taka(p.price*cart[p.id])}</strong></div>`).join("");
- const total=entries.reduce((s,p)=>s+p.price*cart[p.id],0);document.getElementById("cartTotal").textContent=taka(total);
-}
-document.addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.matches("[data-detail]")){e.preventDefault();e.target.click();}});
-const featuredTrack=document.getElementById("featuredTrack");
-function syncFeaturedDots(){const index=Math.round(featuredTrack.scrollLeft/featuredTrack.clientWidth);document.querySelectorAll("[data-feature-dot]").forEach((d,i)=>d.classList.toggle("active",i===index));}
-featuredTrack.addEventListener("scroll",()=>{window.requestAnimationFrame(syncFeaturedDots)},{passive:true});
 
-function openCheckout(preferredId=null){
- const select=document.getElementById("orderProduct");
- select.innerHTML=products.map(p=>`<option value="${p.id}">${p.name} — অফার ${taka(p.price)}</option>`).join("");
- const chosen=preferredId || products.find(p=>cart[p.id])?.id || products[0].id;
- select.value=String(chosen);
- const quantity=cart[chosen]||1;document.getElementById("orderQty").value=String(Math.min(10,Math.max(1,quantity)));
- updateOrderSummary();document.getElementById("checkoutPage").classList.add("open");document.body.style.overflow="hidden";
+<script>
+const KEY="niramoyChhoyaCart";
+const products=[
+ {id:1,name:"ভাইটাল কিং",desc:"শক্তি ও কর্মক্ষমতা-সম্পর্কিত পণ্য। প্যাকেটের নির্দেশনা যাচাই করুন।",price:280,regular:300,images:["vital-king.jpg","vital-king-2.jpg","vital-king-3.jpg"]},
+ {id:2,name:"সাফা খুরমা",desc:"খেজুরের পণ্য।",price:780,regular:900,images:["safa-khurma.jpg","safa-khurma-2.jpg","safa-khurma-3.jpg"]},
+ {id:3,name:"Winpex A to Z Multivitamin",desc:"ভিটামিন ও মিনারেল সাপ্লিমেন্ট।",price:450,regular:500,images:["winpex.jpg","winpex-2.jpg","winpex-3.jpg"]}
+];
+let cart=loadCart(),activeImages={},detailId=null,touchStartX=0;
+
+function loadCart(){try{return JSON.parse(localStorage.getItem(KEY)||"{}")}catch{return {}}}
+function saveCart(){localStorage.setItem(KEY,JSON.stringify(cart));updateCount()}
+function taka(n){return "৳"+Number(n).toLocaleString("en-BD")}
+function count(){return Object.values(cart).reduce((s,q)=>s+(Number(q)||0),0)}
+function total(){return products.reduce((s,p)=>s+p.price*(cart[p.id]||0),0)}
+function toast(s){let t=document.getElementById("toast");t.textContent=s;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
+function updateCount(){document.getElementById("cartCount").textContent=count().toLocaleString("bn-BD")}
+function show(id){document.getElementById(id).classList.add("open");document.body.style.overflow="hidden"}
+function hideAll(){document.querySelectorAll(".overlay.open").forEach(x=>x.classList.remove("open"));document.body.style.overflow=""}
+
+function renderProducts(filter=""){
+ const list=products.filter(p=>(p.name+" "+p.desc).toLowerCase().includes(filter.toLowerCase()));
+ document.getElementById("productGrid").innerHTML=list.length?list.map(p=>{
+  const i=activeImages[p.id]||0,discount=Math.round((p.regular-p.price)/p.regular*100);
+  return `<article class="product">
+   <div class="gallery" data-gallery="${p.id}"><img src="${p.images[i]}" alt="${p.name}" data-zoom="${p.id}" onerror="this.onerror=null;this.src='logo.jpg'"></div>
+   <div class="dots">${p.images.map((im,j)=>`<button class="dot ${j===i?'active':''}" data-dot="${p.id}" data-index="${j}" aria-label="ছবি ${j+1}"></button>`).join("")}</div>
+   <h3 data-detail="${p.id}">${p.name}</h3><p class="desc">${p.desc}</p>
+   <div class="prices"><span class="price">${taka(p.price)}</span><span class="old">${taka(p.regular)}</span><span class="discount">${discount}% ছাড়</span></div>
+   <div class="actions"><button class="add" data-add="${p.id}">🛒 কার্টে যোগ করুন</button><button class="buy" data-buy="${p.id}">এখনই অর্ডার করুন</button></div>
+  </article>`;
+ }).join(""):'<p>কোনো পণ্য পাওয়া যায়নি।</p>';
 }
-function closeCheckout(){document.getElementById("checkoutPage").classList.remove("open");document.body.style.overflow="";}
-function updateOrderSummary(){
- const p=products.find(x=>x.id===Number(document.getElementById("orderProduct").value))||products[0];
- const qty=Number(document.getElementById("orderQty").value)||1,delivery=Number(document.getElementById("deliveryArea").value)||70,subtotal=p.price*qty;
- document.getElementById("orderProductImage").src=p.images[0];document.getElementById("orderProductName").textContent=p.name;document.getElementById("orderProductUnit").textContent="পণ্যের একক মূল্য: "+taka(p.price);
- document.getElementById("summaryUnit").textContent=taka(p.price);document.getElementById("summaryQty").textContent=qty.toLocaleString("bn-BD")+"টি";document.getElementById("summaryProducts").textContent=taka(subtotal);document.getElementById("summaryDelivery").textContent=taka(delivery);document.getElementById("summaryGrand").textContent=taka(subtotal+delivery);
+function renderCart(){
+ const items=products.filter(p=>(cart[p.id]||0)>0);
+ document.getElementById("cartItems").innerHTML=items.length?items.map(p=>`
+ <div class="cart-row">
+  <img src="${p.images[0]}" alt="${p.name}" onerror="this.style.visibility='hidden'">
+  <div><h3 data-detail="${p.id}">${p.name}</h3><p>${taka(p.price)} / পিস</p>
+   <div class="qty"><button data-qty="${p.id}" data-delta="-1">−</button><span>${cart[p.id]}টি</span><button data-qty="${p.id}" data-delta="1">+</button></div>
+   <button class="remove" data-remove="${p.id}">পণ্য সরান</button>
+  </div>
+  <strong class="cart-line-total">${taka(p.price*cart[p.id])}</strong>
+ </div>`).join(""):'<div class="empty">আপনার কার্ট খালি।<br>পছন্দের পণ্য যোগ করে এখানে দেখুন।</div>';
+ document.getElementById("cartTotal").textContent=taka(total());
+ document.getElementById("goOrder").disabled=!items.length;
+ document.getElementById("goOrder").style.opacity=items.length?1:.5;
 }
-document.getElementById("backToShop").addEventListener("click",closeCheckout);
-document.getElementById("orderProduct").addEventListener("change",updateOrderSummary);
-document.getElementById("orderQty").addEventListener("change",updateOrderSummary);
-document.getElementById("deliveryArea").addEventListener("change",updateOrderSummary);
-document.getElementById("newOrderForm").addEventListener("submit",e=>{
- e.preventDefault();const p=products.find(x=>x.id===Number(document.getElementById("orderProduct").value));const qty=Number(document.getElementById("orderQty").value),delivery=Number(document.getElementById("deliveryArea").value),subtotal=p.price*qty,total=subtotal+delivery;
- const name=document.getElementById("orderName").value.trim(),phone=document.getElementById("orderPhone").value.trim(),address=document.getElementById("orderAddress").value.trim();
- const area=delivery===70?"ঢাকার ভিতরে":"ঢাকার বাইরে";
- const message=`নিরাময় ছোঁয়া — নতুন অর্ডার\n\nআপনার নাম: ${name}\nমোবাইল নম্বর: ${phone}\nসম্পূর্ণ ঠিকানা: ${address}\n\nপণ্য: ${p.name}\nপণ্যের একক মূল্য: ${taka(p.price)}\nপরিমাণ: ${qty} টি\nপণ্যের মোট মূল্য: ${taka(subtotal)}\nডেলিভারি এলাকা: ${area}\nডেলিভারি চার্জ: ${taka(delivery)}\nসর্বমোট মূল্য: ${taka(total)}`;
- window.open("https://wa.me/8801642335169?text="+encodeURIComponent(message),"_blank","noopener");
-});
+function add(id){cart[id]=(cart[id]||0)+1;saveCart();renderCart();toast("পণ্য কার্টে যোগ হয়েছে")}
+function openDetails(id){
+ const p=products.find(x=>x.id===id);if(!p)return;
+ detailId=id;
+ document.getElementById("detailImg").src=p.images[activeImages[id]||0];
+ document.getElementById("detailName").textContent=p.name;
+ document.getElementById("detailPrice").textContent=taka(p.price)+" · "+Math.round((p.regular-p.price)/p.regular*100)+"% ছাড়";
+ document.getElementById("detailDesc").textContent=p.desc;
+ show("detailOverlay");
+}
+function openOrder(){
+ if(!count()){toast("আগে কার্টে পণ্য যোগ করুন");return}
+ saveCart();location.href="order.html";
+}
+
+document.getElementById("openCart").onclick=()=>{renderCart();show("cartOverlay")};
+document.getElementById("goOrder").onclick=openOrder;
+document.getElementById("search").addEventListener("input",e=>renderProducts(e.target.value));
+document.getElementById("detailAdd").onclick=()=>{if(detailId){add(detailId);hideAll()}};
+document.getElementById("detailBuy").onclick=()=>{if(detailId){add(detailId);openOrder()}};
 
 document.addEventListener("click",e=>{
- const featureDot=e.target.closest("[data-feature-dot]");if(featureDot){featuredTrack.scrollTo({left:featuredTrack.clientWidth*Number(featureDot.dataset.featureDot),behavior:"smooth"});return}
- const detail=e.target.closest("[data-detail]");if(detail){const p=products.find(x=>x.id===+detail.dataset.detail);if(p){detailProductId=p.id;document.getElementById("detailImage").src=p.images[activeImages[p.id]||0];document.getElementById("detailName").textContent=p.name;document.getElementById("detailPrice").textContent=taka(p.price)+"  "+taka(p.regular)+" ("+discount(p)+"% ছাড়)";document.getElementById("detailDescription").textContent=p.desc;document.getElementById("detailOverlay").classList.add("open");}return}
- const order=e.target.closest("[data-order]");if(order){const id=+order.dataset.order;cart[id]=(cart[id]||0)+1;updateCount();openCheckout(id);return}
- const add=e.target.closest("[data-add]");if(add){const id=+add.dataset.add;cart[id]=(cart[id]||0)+1;updateCount();showToast("পণ্য কার্টে যোগ হয়েছে");return}
- const slide=e.target.closest("[data-slide]");if(slide){const p=products.find(x=>x.id===+slide.dataset.slide);activeImages[p.id]=((activeImages[p.id]||0)+Number(slide.dataset.dir)+p.images.length)%p.images.length;renderProducts(document.getElementById("productSearch").value);return}
- const dot=e.target.closest("[data-dot]");if(dot){activeImages[+dot.dataset.dot]=+dot.dataset.index;renderProducts(document.getElementById("productSearch").value);return}
- const qty=e.target.closest("[data-qty]");if(qty){const id=+qty.dataset.qty;cart[id]=(cart[id]||0)+Number(qty.dataset.delta);if(cart[id]<=0)delete cart[id];updateCount();renderCart();return}
- const zoom=e.target.closest("[data-zoom]");if(zoom){const p=products.find(x=>x.id===+zoom.dataset.zoom);document.getElementById("lightboxImg").src=p.images[activeImages[p.id]||0];document.getElementById("lightboxTitle").textContent=p.name;document.getElementById("imageOverlay").classList.add("open");return}
- if(e.target.closest("#openCart")){openCheckout();return}
- const close=e.target.closest("[data-close]");if(close){document.getElementById(close.dataset.close).classList.remove("open");return}
- if(e.target.classList.contains("overlay"))e.target.classList.remove("open");
+ const addBtn=e.target.closest("[data-add]");if(addBtn){add(+addBtn.dataset.add);return}
+ const buyBtn=e.target.closest("[data-buy]");if(buyBtn){add(+buyBtn.dataset.buy);openOrder();return}
+ const qty=e.target.closest("[data-qty]");if(qty){const id=+qty.dataset.qty;cart[id]=(cart[id]||0)+ +qty.dataset.delta;if(cart[id]<=0)delete cart[id];saveCart();renderCart();return}
+ const rem=e.target.closest("[data-remove]");if(rem){delete cart[+rem.dataset.remove];saveCart();renderCart();return}
+ const dot=e.target.closest("[data-dot]");if(dot){activeImages[+dot.dataset.dot]=+dot.dataset.index;renderProducts(document.getElementById("search").value);return}
+ const detail=e.target.closest("[data-detail]");if(detail){openDetails(+detail.dataset.detail);return}
+ const zoom=e.target.closest("[data-zoom]");if(zoom){const p=products.find(x=>x.id===+zoom.dataset.zoom);document.getElementById("zoomName").textContent=p.name;document.getElementById("zoomImg").src=p.images[activeImages[p.id]||0];show("imageOverlay");return}
+ if(e.target.closest("[data-close]")){hideAll();return}
+ if(e.target.classList.contains("overlay"))hideAll();
 });
-document.getElementById("detailAdd").addEventListener("click",()=>{if(detailProductId!==null){cart[detailProductId]=(cart[detailProductId]||0)+1;updateCount();showToast("পণ্য কার্টে যোগ হয়েছে");document.getElementById("detailOverlay").classList.remove("open");}});
-document.getElementById("detailOrder").addEventListener("click",()=>{if(detailProductId!==null){cart[detailProductId]=(cart[detailProductId]||0)+1;updateCount();document.getElementById("detailOverlay").classList.remove("open");openCheckout(detailProductId);}});
-document.getElementById("topSearch").addEventListener("input",e=>{document.getElementById("productSearch").value=e.target.value;renderProducts(e.target.value);document.getElementById("products").scrollIntoView({behavior:"smooth",block:"start"})});
-document.getElementById("productSearch").addEventListener("input",e=>{document.getElementById("topSearch").value=e.target.value;renderProducts(e.target.value)});
-document.getElementById("checkoutForm").addEventListener("submit",e=>{
- e.preventDefault();const entries=products.filter(p=>cart[p.id]);if(!entries.length){showToast("আগে কার্টে পণ্য যোগ করুন");return}
- const name=document.getElementById("customerName").value.trim(),phone=document.getElementById("customerPhone").value.trim(),address=document.getElementById("customerAddress").value.trim();
- const lines=entries.map(p=>`• ${p.name} × ${cart[p.id]} = ${taka(p.price*cart[p.id])}`).join("\n");
- const total=entries.reduce((s,p)=>s+p.price*cart[p.id],0);
- const message=`নিরাময় ছোঁয়া — নতুন অর্ডার\n\nনাম: ${name}\nমোবাইল: ${phone}\nঠিকানা: ${address}\n\nপণ্যের তালিকা:\n${lines}\n\nমোট: ${taka(total)}`;
- /* নিচের নম্বরটি আপনার অর্ডার নেওয়ার WhatsApp নম্বর দিয়ে বদলান (দেশের কোডসহ, + ছাড়া)। */
- const whatsappNumber="8801642335169";
- window.open("https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message),"_blank","noopener");
-});
-renderProducts();
+
+document.addEventListener("touchstart",e=>{
+ const gallery=e.target.closest("[data-gallery]");if(gallery)touchStartX=e.touches[0].clientX;
+},{passive:true});
+document.addEventListener("touchend",e=>{
+ const gallery=e.target.closest("[data-gallery]");if(!gallery)return;
+ const dx=e.changedTouches[0].clientX-touchStartX;
+ if(Math.abs(dx)<40)return;
+ const id=+gallery.dataset.gallery,p=products.find(x=>x.id===id);
+ activeImages[id]=((activeImages[id]||0)+(dx<0?1:-1)+p.images.length)%p.images.length;
+ renderProducts(document.getElementById("search").value);
+},{passive:true});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")hideAll()});
+renderProducts();renderCart();updateCount();
 </script>
 </body>
 </html>
