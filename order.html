@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0875d1">
+<title>অর্ডার করুন | নিরাময় ছোঁয়া</title>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0875d1;--dark:#0754a5;--ink:#12365d;--muted:#6b8199;--line:#dceafa}
+*{box-sizing:border-box}
+body{margin:0;padding:18px 12px 40px;font-family:'Hind Siliguri',sans-serif;color:var(--ink);background:radial-gradient(ellipse at top left,#d9edff 0,transparent 42%),linear-gradient(145deg,#f8fcff,#edf6ff 60%,#f0fff7);min-height:100vh}
+button,input,textarea,select{font:inherit}button{cursor:pointer}
+.shell{width:min(760px,100%);margin:auto}
+.top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.back{border:0;border-radius:12px;background:#e5f2ff;color:var(--dark);padding:11px 13px;font-weight:800}
+.brand{font-weight:800;font-size:19px;color:var(--dark)}
+.card{background:#ffffffed;border:1px solid var(--line);border-radius:24px;padding:clamp(16px,4vw,27px);box-shadow:0 20px 50px #2e70a311}
+h1{font-size:30px;color:var(--dark);margin:0 0 3px}.sub{color:var(--muted);margin:0 0 20px}
+.label{display:block;font-weight:700;margin:15px 0 6px}
+input,textarea,select{width:100%;padding:12px 13px;border:1px solid #cfe3f5;border-radius:12px;background:#fff;color:var(--ink);outline-color:var(--blue)}
+textarea{min-height:85px;resize:vertical}
+.item{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:11px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.item img{width:72px;height:72px;object-fit:contain;background:white;border-radius:12px;border:1px solid #edf4fb}
+.item h3{font-size:16px;margin:0}.item p{font-size:13px;color:var(--muted);margin:3px 0}
+.qty{display:flex;align-items:center;gap:8px;margin-top:5px}.qty button{width:28px;height:28px;border:0;border-radius:8px;background:#e3f1ff;color:var(--dark);font-weight:800}
+.remove{border:0;background:none;color:#c23d4b;font-size:12px;padding:3px 0}
+.line-total{font-size:14px;font-weight:800;color:var(--dark);white-space:nowrap}
+.summary{margin-top:18px;background:linear-gradient(135deg,#eff8ff,#f5fff9);border:1px solid #d6eafb;border-radius:16px;padding:15px}
+.row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;color:#4d6b88}
+.grand{border-top:1px solid #d0e4f5;margin-top:5px;padding-top:13px;font-size:21px;font-weight:900;color:var(--dark)}
+.submit{width:100%;margin-top:18px;padding:15px;border:0;border-radius:13px;background:linear-gradient(110deg,#0875d1,#2694eb);color:white;font-size:18px;font-weight:900;box-shadow:0 7px 20px #0875d126}
+.note{display:block;margin-top:12px;color:var(--muted);font-size:13px;line-height:1.7}
+.empty{text-align:center;padding:22px;color:var(--muted)}
+@media(max-width:480px){h1{font-size:26px}.item{grid-template-columns:55px minmax(0,1fr) auto;gap:8px}.item img{width:55px;height:60px}.item h3{font-size:14px}.line-total{font-size:12px}.grand{font-size:19px}.brand{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="shell">
+ <div class="top">
+  <button class="back" id="back">← ফিরে যান</button>
+  <span class="brand">নিরাময় ছোঁয়া</span>
+ </div>
+
+ <section class="card">
+  <h1>অর্ডার ফরম</h1>
+  <p class="sub">নিচে আপনার সঠিক তথ্য দিয়ে অর্ডার দিন।</p>
+
+  <form id="orderForm">
+   <label class="label" for="name">আপনার নাম *</label>
+   <input id="name" placeholder="আপনার সম্পূর্ণ নাম" autocomplete="name" required>
+
+   <label class="label" for="phone">মোবাইল নম্বর *</label>
+   <input id="phone" placeholder="01XXXXXXXXX" inputmode="tel" autocomplete="tel" pattern="01[0-9]{9}" title="১১ সংখ্যার বাংলাদেশি মোবাইল নম্বর দিন" required>
+
+   <label class="label" for="address">সম্পূর্ণ ঠিকানা *</label>
+   <textarea id="address" placeholder="বাসা, গ্রাম/এলাকা, উপজেলা ও জেলা" autocomplete="street-address" required></textarea>
+
+   <label class="label">আপনার নির্বাচিত পণ্য</label>
+   <div id="items"></div>
+
+   <label class="label" for="delivery">ডেলিভারি এলাকা *</label>
+   <select id="delivery" required>
+    <option value="70">ঢাকার ভিতরে — ৳৭০</option>
+    <option value="120">ঢাকার বাইরে — ৳১২০</option>
+   </select>
+
+   <div class="summary">
+    <div class="row"><span>মোট পণ্যের সংখ্যা</span><strong id="quantity">০টি</strong></div>
+    <div class="row"><span>পণ্যের মোট মূল্য</span><strong id="subtotal">৳০</strong></div>
+    <div class="row"><span>ডেলিভারি চার্জ</span><strong id="shipping">৳৭০</strong></div>
+    <div class="row grand"><span>সর্বমোট</span><strong id="grand">৳৭০</strong></div>
+   </div>
+
+   <button class="submit" type="submit" id="submit">WhatsApp-এ অর্ডার করুন ↗</button>
+   <small class="note">WhatsApp খুললে অর্ডারের বিবরণ দেখে Send চাপুন।</small>
+  </form>
+ </section>
+</div>
+
+<script>
+const KEY="niramoyChhoyaCart";
+const products=[
+ {id:1,name:"ভাইটাল কিং",price:280,images:["vital-king.jpg","vital-king-2.jpg","vital-king-3.jpg"]},
+ {id:2,name:"সাফা খুরমা",price:780,images:["safa-khurma.jpg","safa-khurma-2.jpg","safa-khurma-3.jpg"]},
+ {id:3,name:"Winpex A to Z Multivitamin",price:450,images:["winpex.jpg","winpex-2.jpg","winpex-3.jpg"]}
+];
+
+function readCart(){
+ try{
+  const data=JSON.parse(localStorage.getItem(KEY)||"{}");
+  const clean={};
+  products.forEach(p=>{
+   const q=Number(data[p.id]);
+   if(Number.isSafeInteger(q)&&q>0)clean[p.id]=Math.min(q,99);
+  });
+  return clean;
+ }catch{return {}}
+}
+let cart=readCart();
+
+function save(){localStorage.setItem(KEY,JSON.stringify(cart))}
+function taka(n){return "৳"+Number(n).toLocaleString("en-BD")}
+function subtotal(){return products.reduce((s,p)=>s+p.price*(cart[p.id]||0),0)}
+function quantity(){return Object.values(cart).reduce((s,q)=>s+q,0)}
+
+function render(){
+ const chosen=products.filter(p=>(cart[p.id]||0)>0);
+ const box=document.getElementById("items");
+
+ box.innerHTML=chosen.length?chosen.map(p=>`
+  <div class="item">
+   <img src="${p.images[0]}" alt="${p.name}" onerror="this.style.visibility='hidden'">
+   <div>
+    <h3>${p.name}</h3>
+    <p>প্রতি পিস ${taka(p.price)}</p>
+    <div class="qty">
+     <button type="button" data-qty="${p.id}" data-delta="-1">−</button>
+     <span>${cart[p.id]}টি</span>
+     <button type="button" data-qty="${p.id}" data-delta="1">+</button>
+    </div>
+    <button class="remove" type="button" data-remove="${p.id}">পণ্য সরান</button>
+   </div>
+   <strong class="line-total">${taka(p.price*cart[p.id])}</strong>
+  </div>
+ `).join(""):'<div class="empty">কার্ট খালি।<br>শপিং পেজে ফিরে পণ্য যোগ করুন।</div>';
+
+ document.getElementById("quantity").textContent=quantity().toLocaleString("bn-BD")+"টি";
+ document.getElementById("subtotal").textContent=taka(subtotal());
+ document.getElementById("submit").disabled=!chosen.length;
+ document.getElementById("submit").style.opacity=chosen.length?1:.5;
+ updateTotal();
+}
+
+function updateTotal(){
+ const delivery=Number(document.getElementById("delivery").value);
+ document.getElementById("shipping").textContent=taka(delivery);
+ document.getElementById("grand").textContent=taka(subtotal()+delivery);
+}
+
+document.getElementById("delivery").addEventListener("change",updateTotal);
+document.getElementById("back").addEventListener("click",()=>location.href="index.html");
+
+document.addEventListener("click",e=>{
+ const q=e.target.closest("[data-qty]");
+ const r=e.target.closest("[data-remove]");
+
+ if(q){
+  const id=+q.dataset.qty;
+  cart[id]=(cart[id]||0)+ +q.dataset.delta;
+  if(cart[id]<=0)delete cart[id];
+  save();render();
+ }
+ if(r){
+  delete cart[+r.dataset.remove];
+  save();render();
+ }
+});
+
+document.getElementById("orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!quantity()){alert("কার্টে কোনো পণ্য নেই।");return}
+
+ const name=document.getElementById("name").value.trim();
+ const phone=document.getElementById("phone").value.trim();
+ const address=document.getElementById("address").value.trim();
+ const delivery=Number(document.getElementById("delivery").value);
+ const area=delivery===70?"ঢাকার ভিতরে":"ঢাকার বাইরে";
+
+ const lines=products.filter(p=>(cart[p.id]||0)>0)
+  .map(p=>`• ${p.name} × ${cart[p.id]}টি = ${taka(p.price*cart[p.id])}`)
+  .join("\n");
+
+ const message=`নিরাময় ছোঁয়া — নতুন অর্ডার
+
+আপনার নাম: ${name}
+মোবাইল নম্বর: ${phone}
+সম্পূর্ণ ঠিকানা: ${address}
+
+পণ্যের তালিকা:
+${lines}
+
+মোট পণ্যের সংখ্যা: ${quantity()}টি
+পণ্যের মোট মূল্য: ${taka(subtotal())}
+ডেলিভারি এলাকা: ${area}
+ডেলিভারি চার্জ: ${taka(delivery)}
+সর্বমোট মূল্য: ${taka(subtotal()+delivery)}`;
+
+ const whatsapp="8801642335169";
+ window.open("https://wa.me/"+whatsapp+"?text="+encodeURIComponent(message),"_blank");
+});
+
+render();
+</script>
+</body>
+</html>
